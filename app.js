@@ -1,12 +1,6 @@
+// Import necessary modules
 const express = require('express');
 const path = require('path');
-
-// Import the database and the url to the cluster
-const mongoose = require("mongoose");
-const dbUrl = "mongodb+srv://huysuy05:ditcumay@cluster05.gbowi.mongodb.net/?retryWrites=true&w=majority&appName=Cluster05y";
-
-
-// app.js
 
 // Import necessary modules
 
@@ -21,7 +15,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Route back to the home page
 app.get("/", (req, res) => {
-    res.redirect("/home")
+    res.redirect("/home");
 })
 
 // Routing to the home page
