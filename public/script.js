@@ -14,6 +14,25 @@ document.addEventListener("DOMContentLoaded", function () {
             taskInput.value = ""; // Clear input field
         }
     });
+    // Funtion to save data to the mongoDB db
+    function saveTasktoDB(taskName) {
+        fetch("/to-do", {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({taskName})
+        })
+        .then((res) => {
+            if (res.ok) {
+                console.log("Saved successfully")
+            } 
+            else {
+                console.log("Failed to save tasks")
+            }
+        })
+        .catch((err) => {console.error(`Error: ${err}`)})
+    };
+        
+
 
     // Function to add a task to the list
     function addTask(taskName) {
@@ -50,6 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Append the list item to the task list
         taskList.appendChild(li);
+        saveTasktoDB(taskName);
     }
 
 
