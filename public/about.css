@@ -43,3 +43,14 @@ h1 {
     margin-bottom: 15px;
     font-size: 1.2rem;
 }
+
+#background-video {
+    position: fixed;
+    opacity: 70%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
