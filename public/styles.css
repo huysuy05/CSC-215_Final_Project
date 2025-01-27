@@ -200,3 +200,18 @@ li.removed {
     border-radius: 100%;
     border: #f1f1f1;
 }
+
+/* Completed task styles */
+.task-item.completed .task-title {
+    text-decoration: line-through;
+    /* Add strikethrough */
+    color: #888;
+    /* Dim the text color */
+}
+
+.task-item.completed {
+    opacity: 0.5;
+    /* Reduce opacity */
+    transition: opacity 0.3s ease;
+    /* Smooth transition for opacity */
+}

@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Welcome to our To-Do web app</title>
+    <title>Home</title>
+    <link rel="stylesheet" href="/home.css" />
     <script defer>
       function navigateTo(route) {
         window.location.href = route;
@@ -11,9 +12,13 @@
     </script>
   </head>
   <body>
-    <h1>To-Do Web app</h1>
-    <h2>Huy Nguyen x Leroy</h2>
-    <button onclick="navigateTo('/to-do')">Start writing your task</button>
+    <h1>Welcome to the To-Do App</h1>
+    
+    <h2>Start organizing your tasks and boost your productivity!</h2>
+    <p>Huy Nguyen x Leroy Gawu-Mensah</p>
+    <div class="button-group">
+    <button onclick="navigateTo('/to-do')">Start writing your tasks</button>
     <button onclick="navigateTo('/about')">About the app</button>
+    </div>
   </body>
 </html>

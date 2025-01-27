@@ -15,6 +15,11 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+    taskSpan.addEventListener("click", function () {
+        checkbox.checked = !checkbox.checked; // Toggle the checkbox state
+        li.classList.toggle("completed"); // Toggle the completed class
+    });
+
     // Function to add a task to the list
     function addTask(taskName) {
         const li = document.createElement("li");
@@ -35,26 +40,15 @@ document.addEventListener("DOMContentLoaded", function () {
         taskSpan.textContent = taskName;
         taskSpan.classList.add("task-title"); // Optional class for styling
 
-        // Add a delete button to each task
-        const deleteButton = document.createElement("button");
-        deleteButton.textContent = "Delete";
-        deleteButton.classList.add("delete");
-        deleteButton.addEventListener("click", function () {
-            li.remove(); // Remove task from list
-        });
-
-        // Append the checkbox, task name, and delete button to the list item
+        // Append the checkbox and task name to the list item
         li.appendChild(checkbox); // Checkbox comes first
         li.appendChild(taskSpan); // Then the task name
-        li.appendChild(deleteButton); // Finally the delete button
 
         // Append the list item to the task list
         taskList.appendChild(li);
     }
-
-
-
 });
+
 
 // Fetch task from server
 function loadTask() {
