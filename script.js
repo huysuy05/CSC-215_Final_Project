@@ -62,6 +62,10 @@ function loadTask() {
         .then((res) => res.json())
         .then((tasks) => {
             taskList.innerHTML = '';
-            tasks.forEach
+            tasks.forEach((task) => {
+                const li = document.createElement("li");
+                li.textContent = task.name;
+                taskList.appendChild(li);
+            })
         })
 }
