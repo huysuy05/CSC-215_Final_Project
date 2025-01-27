@@ -90,6 +90,7 @@ ul {
 li {
     display: flex;
     justify-content: space-between;
+
     align-items: center;
     margin: 10px 0;
     padding: 10px;
@@ -103,6 +104,25 @@ li {
 li:hover {
     transform: translateY(-2px);
     background-color: #f1f1f1;
+}
+
+.task-checkbox {
+    margin-right: 5px;
+    /* Reduces space between checkbox and title */
+    width: 18px;
+    /* Adjust checkbox size */
+    height: 18px;
+}
+
+/* Task title styling */
+.task-title {
+    margin: 0;
+    line-height: 1.2;
+    /* Aligns text with the checkbox */
+    flex-grow: 1;
+    /* Ensures the title takes up available space if needed */
+    padding-left: 5px;
+    /* Optional: Fine-tune spacing */
 }
 
 button.delete {
@@ -173,4 +193,10 @@ li.removed {
     to {
         opacity: 0;
     }
+}
+
+#profile {
+    width: 90px;
+    border-radius: 100%;
+    border: #f1f1f1;
 }
